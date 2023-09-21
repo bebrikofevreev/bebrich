@@ -1,0 +1,117 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1170px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.header{
+    background-color: #F7EDE8;
+    padding-top: 30px;
+    height: calc(100vh - 30px);
+}
+.header__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.header__link img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    transition: opacity .3s ease-in;
+}
+.header__link img:hover{
+    opacity: .8;
+}
+.header__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 96px;
+    letter-spacing: -3.84px;
+}
+.title span{
+    color: #CD4631;
+}
+.subtitle{
+    max-width: 700px;
+    text-align: center;
+    font-size: 16px;
+    color: #4D4D4D;
+    font-weight: 500;
+}
+.btn{
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #000;
+    background-color: #F7EDE8;
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    font-weight: 700;
+    transition: all .3s ease-out;
+}
+.btn:hover{
+    transform: translateX(6px) translateY(6px);
+    box-shadow: none;
+    background-color: #000;
+    color: #F7EDE8;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/header/line.svg);
+    background-repeat: no-repeat;
+    top: 120px;
+    left: 0;
+    width: 325px;
+    height: 490px;
+}
+.header::after{
+    content: '';
+    position: absolute;
+    background-image: url(../images/header/stars.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    top: 300px;
+    right: 0;
+    width: 100px;
+    height: 180px;
+    z-index: 1;
+}
+.theme{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header.header--active{
+    background-color: #333333;
+}
+.header--active.header::after{
+    display: none;
+}
+.header--active .subtitle{
+    color: #F7EDE8;
+}
+.header--active .title{
+    color: #F7EDE8;
+}
+.author{
+    text-decoration: underline;
+}
